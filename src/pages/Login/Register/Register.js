@@ -16,6 +16,15 @@ const Register = () => {
 
         console.log(name, email,photo, password);
 
+        createUser(email,password)
+        .then(result =>{
+           const Creteduser = result.user;
+           console.log(Creteduser);
+        })
+        .catch(error =>{
+           console.log(error.message)
+        })
+
     }
 
     return (
