@@ -8,7 +8,7 @@ import app from '../components/Firebase/Firebase.config';
 
 const AuthProvider = ({children}) => { 
      
-    const user = {displayName: 'Fahim Ahmed'};
+    const user = null;
 
     const authInfo = {
         user
