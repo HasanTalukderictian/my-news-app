@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
+import PZone from '../PZone/PZone';
 
 const LeftNav = () => {
   
@@ -25,6 +26,9 @@ const LeftNav = () => {
                <Link to={`/category/${category.id}`} className='text-info-emphasi text-decoration-none'>{category.name}</Link>
             </p>)
            }
+          </div>
+          <div>
+            <PZone></PZone>
           </div>
         </div>
     );
