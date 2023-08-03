@@ -7,7 +7,17 @@ import React, { useContext } from 'react';
 
 const NavigationBar = () => {
 
-    const {user} = useContext(AuthContext);
+    const {user, logOut} = useContext(AuthContext);
+
+    const handlelogOut =() =>{
+        logOut()
+        .then(result =>{
+            const SignUser = result.user;
+        })
+        .catch(error=>{
+            
+        })
+    }
      
     return (
         <Container>
@@ -32,7 +42,7 @@ const NavigationBar = () => {
          
             {
                 user ? 
-                <Button variant="secondary">Logout</Button>
+                <Button onClick={handlelogOut} variant="secondary">Logout</Button>
                 :
                 <Link to='/login'>
                 <Button variant="secondary">Login</Button>
