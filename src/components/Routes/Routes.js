@@ -8,6 +8,7 @@ import Login from '../../pages/Login/Login/Login';
 import Register from '../../pages/Login/Register/Register';
 import {Navigate} from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
+import Terms from '../../pages/Terms/Terms';
 
 
 
@@ -29,7 +30,11 @@ const  router =  createBrowserRouter([
             {
                 path:'register',
                 element:<Register></Register>
-            }
+            },
+            {
+                path:'/terms',
+                element:<Terms></Terms>
+            },
         ]
      },
 
@@ -44,6 +49,7 @@ const  router =  createBrowserRouter([
                 element:<Category></Category>,
                 loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
             },
+          
            
         ]
     },
